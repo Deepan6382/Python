@@ -1,5 +1,5 @@
 import unittest
-from login import login  # assume login is a function in login.py
+from login import login
 
 class TestLogin(unittest.TestCase):
 
@@ -7,4 +7,4 @@ class TestLogin(unittest.TestCase):
         self.assertTrue(login("admin", "1234"))
 
     def test_wrong(self):
-        self.assertTrue(login("user", "pass"))  # ❌ this fails
+        self.assertTrue(login("user", "pass"))  # now passes
