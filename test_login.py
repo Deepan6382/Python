@@ -1,12 +1,10 @@
 import unittest
-from login import login
+from login import login  # assume login is a function in login.py
 
 class TestLogin(unittest.TestCase):
-    def test_Valid(self):
-        self.assertTrue(login("admin","1234"))
-        # self.assertTrue(self,expr,msg)
-    def test_wrong(self):
-        self.assertTrue(login("user","pass"))
 
-if __name__ == "__main__":
-    unittest.main()
+    def test_correct(self):
+        self.assertTrue(login("admin", "1234"))
+
+    def test_wrong(self):
+        self.assertTrue(login("user", "pass"))  # ❌ this fails
