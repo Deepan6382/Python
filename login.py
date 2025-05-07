@@ -1,6 +1,6 @@
-def login(username,password):
-    if username == 'admin' and password == '1234':
-        return True
-    else:
-        return False
-
+def login(username, password):
+    users = {
+        "admin": "1234",
+        "user": "pass"
+    }
+    return users.get(username) == password
